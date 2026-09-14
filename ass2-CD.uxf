@@ -1,0 +1,147 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>100</x><y>170</y><w>250</w><h>130</h></coordinates><panel_attributes>PetStore
+--
+- breeds: List&lt;PetBreed&gt;
+--
++ add_pet_breed(breed: PetBreed): void
++ search_pet_Breed(name: String): Pet
++ edit_pet_breed(breed: PetBreed): void
++ delete_pet_breed(breed: PetBreed): void 
++ show_all_breeds(): void
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>220</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+manages
+m1=1
+m2=0..*
+group=group-1</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>300</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-1</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>340</y><w>210</w><h>80</h></coordinates><panel_attributes>
+group=group-1</panel_attributes><additional_attributes>190;60;190;20;10;20;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>400</y><w>170</w><h>120</h></coordinates><panel_attributes>DogBreed
+--
++ sizes: List&lt;String&gt;
++ coats: List&lt;String&gt;
+--
+- activities: String
+--
++ displayProfile(): String
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>400</y><w>170</w><h>120</h></coordinates><panel_attributes>CatBreed
+--
+- colour: String
+--
++ displayProfile(): String
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_AustralianTerrier: Dog_
+--
+id: 2
+type = "Dog"
+name =  "Australian Terrier"
+size = "Small"
+weight = "6.5kg"
+coat = "Long"
+energy = "Medium"
+temperament = "Australian Terriers are spirited, affectionate, and intelligent."
+lifespan = "The Australian Terrier can live between 12 to 15 years."
+activities = "Conformation, Agility, Obedience"
+
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_BorderCollie : Dog_
+--
+id: 3
+type = "Dog"
+name =  "Border Collie"
+size = "Medium"
+weight = "14-20kg"
+coat = "Medium"
+energy = "High"
+temperament = "Border Collies are known for their friendly and affectionate nature."
+lifespan = "The average lifespan of a Border Collie is around 12 to 15 years."
+activities = "Agility, Conformation, Herding, Obedience, Rally Obedience, Tracking"
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>510</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>510</y><w>220</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-1</panel_attributes><additional_attributes>200;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_NorwegianForestCat : Cat_
+--
+id: 4
+type = "Cat"
+name =  "Norwegian Forest Cat"
+size = "Large"
+weight = "6-10kg"
+coat = "Long"
+energy = "Medium"
+temperament = "Norwegian Forest Cats are known for their gentle and friendly temperament."
+lifespan = "The average lifespan of a Norwegian Forest Cat ranges from 12 to 16 years."
+colour = "White, black, blue, red, cream and silver, plus various patterns and shadings"
+
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>510</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>510</y><w>230</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-1</panel_attributes><additional_attributes>10;10;210;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_Ragdoll : Cat_
+--
+id: 5
+type = "Cat"
+name =  "Ragdoll"
+size = "Medium"
+weight = "4-9kg"
+coat = "Long"
+energy = "Low"
+temperament = "Ragdolls are known for their docile and laid-back temperament."
+lifespan = "The average lifespan of a Ragdoll cat ranges from 12 to 15 years."
+colour = "Seal, blue, chocolate, lilac, red and cream, plus various patterns and shadings, including bi-color, van, colorpoint and mitted"
+
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>80</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>100</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+group=group-1</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>80</y><w>120</w><h>30</h></coordinates><panel_attributes>InvalidSizeError
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>InvalidCoatError
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>80</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>90</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-1</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>10</y><w>70</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-1</panel_attributes><additional_attributes>50;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>30</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-1</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>10</y><w>70</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-1</panel_attributes><additional_attributes>10;70;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>90</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-1</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>350</y><w>190</w><h>190</h></coordinates><panel_attributes>_AlaskanMalamute : Dog_
+--
+id: 1
+type = "Dog"
+name =  "Alaskan Malamute"
+size = "Giant"
+weight = "38-56kg"
+coat = "Medium"
+energy = "High"
+temperament = "Alaskan Malamutes are known for their friendly and affectionate temperament."
+lifespan = "The average lifespan of an Alaskan Malamute is around 10 to 14 years."
+activities = "Agility, Dog Sledding, Obedience, Rally Obedience, Therapy"
+
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>430</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-1</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>350</y><w>190</w><h>190</h></coordinates><panel_attributes>_Siamese: Cat_
+--
+id: 6
+type = "Cat"
+name =  "Siamese"
+size = "Medium"
+weight = "3-7kg"
+coat = "Short"
+energy = "High"
+temperament = "Siamese cats are known for their sociable and playful temperament."
+lifespan = "The average lifespan of a Siamese cat ranges from 12 to 20 years."
+colour = "Seal point, chocolate point, blue point, lilac point"
+
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>440</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-1</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>80</y><w>260</w><h>230</h></coordinates><panel_attributes>/PetBreed/
+--
++ sizes: List&lt;String&gt;
++ coats: List&lt;String&gt;
+--
+- id: int     {unique}              
+- type: String 
+- name: String    
+- size: String       
+- weight: int  
+- coat: String
+- energy: String   
+- temperament: String
+- lifespan: String                
+--
++ displayProfile(): String
+
+group=group-1</panel_attributes><additional_attributes></additional_attributes></element></diagram>
