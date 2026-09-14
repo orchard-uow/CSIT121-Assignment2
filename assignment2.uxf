@@ -1,0 +1,374 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>488</x><y>784</y><w>80</w><h>24</h></coordinates><panel_attributes>PetBreed
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>744</y><w>80</w><h>24</h></coordinates><panel_attributes>DogBreed
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>832</y><w>80</w><h>24</h></coordinates><panel_attributes>CatBreed
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>792</y><w>80</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-0</panel_attributes><additional_attributes>10;10;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>752</y><w>48</w><h>112</h></coordinates><panel_attributes>
+group=group-0</panel_attributes><additional_attributes>40;10;10;10;10;120;40;120</additional_attributes></element><element><id>Relation</id><coordinates><x>376</x><y>784</y><w>128</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+manages
+m1=1
+m2=0..*
+group=group-0</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>304</x><y>784</y><w>80</w><h>24</h></coordinates><panel_attributes>PetStore
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>0</x><y>0</y><w>328</w><h>480</h></coordinates><panel_attributes>CSIT121 - Assignment 1
+
+Your task is to analyze, design, and implement PetMatch, 
+a pet breed information management system,
+using information available from Purina Australia.
+
+PetMatch will &lt;store&gt; &lt;pet breed&gt; profiles so that &lt;users&gt; can maintain 
+and explore information about different breeds. 
+
+Model the domain using classes, attributes, methods, 
+object relationships. 
+
+Purina Australia provides breed information for &lt;cats&gt; and &lt;dogs&gt;.
+Its breed pages describe characteristics such as size, coat, energy level,
+color, weight, temperament, shedding, and activities. 
+You do not need to reproduce every field or every breed. 
+
+Use OOA to identify the key entities needed by PetMatch, 
+define appropriate attributes and behaviors, 
+establish meaningful relationships among the classes. 
+The four required system operations are add, search, edit, and delete.
+
+1. OOA:
+Design a system that includes at least three classes,
+each with attributes and behaviors relevant to pet breed
+information management. 
+
+2. OOD: 
+Create a UML class diagram to illustrate your 
+class design and relationships. 
+
+3. OOP: 
+Implement the system in Python using OOP principles such as
+association, composition, and aggregation where appropriate. 
+
+4. Unit test: 
+Test the system by writing at least one unit test in Python to
+verify a core functionality (e.g., searching for a pet using breed name).
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>424</x><y>0</y><w>120</w><h>80</h></coordinates><panel_attributes>OOA- First-cut class list:
+
+- PetBreed
+   - DogBreed
+   - CatBreed
+- PetStore
+
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>552</x><y>0</y><w>256</w><h>80</h></coordinates><panel_attributes>OOA - Relationships   
+
+a DogBreed is a PetBreed - Generalisation/Inheritance
+a CatBreed is a PetBreed  - Generalisation/Inheritance
+a PetStore can have zero or many PetBreeds
+
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>816</x><y>0</y><w>256</w><h>48</h></coordinates><panel_attributes>OOA
+Multiplicities
+PetStore 1 ----manages ---- 0..* PetBreed
+
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>832</x><y>56</y><w>240</w><h>216</h></coordinates><panel_attributes>OOA- Understanding - Assumptions - Discussion
+
+PetStore
+============================
+- stores and manages a collection of breed profiles
+
+Attributes:
+=========
+- breeds[ ]
+
+Behaviors:
+=========
+- addBreed()
+- searchBreed()
+- editBreed()
+- deleteBreed() 
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>0</x><y>488</y><w>280</w><h>248</h></coordinates><panel_attributes>OOA- Select a manageable sample of data
+
+Dog breeds
+=========
+m https://www.purina.com.au/chihuahua.html
+s https://www.purina.com.au/australian-terrier.html
+md https://www.purina.com.au/border-collie.html
+l - https://www.purina.com.au/akita.html
+g - https://www.purina.com.au/alaskan-malamute.html
+??? extras
+https://www.purina.com.au/samoyed.html
+https://www.purina.com.au/siberian-husky.html
+
+Cat breeds
+=========
+s-md https://www.purina.com.au/devon-rex.html
+md-l https://www.purina.com.au/himalayan-cat.html
+l - https://www.purina.com.au/norwegian-forest-cat.html
+https://www.purina.com.au/birman.html
+https://www.purina.com.au/russian-blue.html
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>336</x><y>0</y><w>80</w><h>40</h></coordinates><panel_attributes>
+OOA
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>304</x><y>656</y><w>80</w><h>40</h></coordinates><panel_attributes>
+OOD
+bg=yellow
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>304</x><y>704</y><w>80</w><h>48</h></coordinates><panel_attributes>OOD
+
+Conceptual OOD
+bg=yellow
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>752</x><y>888</y><w>224</w><h>72</h></coordinates><panel_attributes>OOD
+
+Design Class Diagram
+- ellaborated attributes
+- method signatures
+bg=yellow
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>136</x><y>968</y><w>200</w><h>104</h></coordinates><panel_attributes>PetStore
+--
+- breeds: List&lt;PetBreed&gt;
+--
++ add_pet_breed(breed: PetBreed): void
++ search_pet_Breed(name: String): Pet
++ edit_pet_breed(breed: PetBreed): void
++ delete_pet_breed(breed: PetBreed): void 
++ show_all_breeds(): void
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>328</x><y>1008</y><w>144</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+manages
+m1=1
+m2=0..*
+group=group-4</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>456</x><y>896</y><w>208</w><h>184</h></coordinates><panel_attributes>/PetBreed/
+--
++ sizes: List&lt;String&gt;
++ coats: List&lt;String&gt;
+--
+- id: int     {unique}              
+- type: String 
+- name: String    
+- size: String       
+- weight: int  
+- coat: String
+- energy: String   
+- temperament: String
+- lifespan: String                
+--
++ displayProfile(): String
+
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>552</x><y>1072</y><w>24</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-4</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>1104</y><w>168</w><h>64</h></coordinates><panel_attributes>
+group=group-4</panel_attributes><additional_attributes>190;60;190;20;10;20;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>1152</y><w>136</w><h>96</h></coordinates><panel_attributes>DogBreed
+--
++ sizes: List&lt;String&gt;
++ coats: List&lt;String&gt;
+--
+- activities: String
+--
++ displayProfile(): String
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>1152</y><w>136</w><h>96</h></coordinates><panel_attributes>CatBreed
+--
+- colour: String
+--
++ displayProfile(): String
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>224</x><y>1304</y><w>152</w><h>152</h></coordinates><panel_attributes>_AustralianTerrier: Dog_
+--
+id: 2
+name =  "Australian Terrier"
+type = "Dog"
+size = "Small"
+coat = "Long"
+energy = "Medium"
+weight = "6.5kg"
+activities = "Conformation, Agility, Obedience"
+temperament = "Australian Terriers are spirited, affectionate, and intelligent."
+lifespan = "The Australian Terrier can live between 12 to 15 years."
+
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>584</x><y>336</y><w>240</w><h>296</h></coordinates><panel_attributes>OOA- Dogbreed concrete subclasses
+
+id: 1
+name: Alaskan Malamute
+type: Dog
+size: Giant
+coat: Medium
+energy: High
+weight: 38-56kg
+
+name: Border Collie
+type: Dog
+size: Medium
+coat: Medium
+energy: High
+weight: 14-20kg
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>832</x><y>488</y><w>240</w><h>192</h></coordinates><panel_attributes>OOA- Catbreed concrete subclasses
+
+name: Norwegian Forest Cat
+type: Cat
+size: Large
+coat: Long
+energy: Medium
+weight: 6-10kg
+
+name: Ragdoll
+type: Cat
+size: Medium
+coat: Semi Long
+energy: Low
+weight: 4-9kg
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>1304</y><w>152</w><h>152</h></coordinates><panel_attributes>_BorderCollie : Dog_
+--
+id: 3
+name =  "Border Collie"
+type = "Dog"
+size = "Medium"
+coat = "Medium"
+energy = "High"
+weight = "14-20kg"
+activities = "Agility, Conformation, Herding, Obedience, Rally Obedience, Tracking"
+temperament = "Border Collies are known for their friendly and affectionate nature."
+lifespan = "The average lifespan of a Border Collie is around 12 to 15 years."
+
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>1240</y><w>80</w><h>80</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-4</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>1240</y><w>176</w><h>80</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-4</panel_attributes><additional_attributes>200;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>1304</y><w>152</w><h>152</h></coordinates><panel_attributes>_NorwegianForestCat : Cat_
+--
+id: 4
+name =  "Norwegian Forest Cat"
+type = "Cat"
+size = "Large"
+coat = "Long"
+energy = "Medium"
+weight = "6-10kg"
+colour = "White, black, blue, red, cream and silver, plus various patterns and shadings"
+temperament = "Norwegian Forest Cats are known for their gentle and friendly temperament."
+lifespan = "The average lifespan of a Norwegian Forest Cat ranges from 12 to 16 years."
+
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>1240</y><w>80</w><h>80</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-4</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>656</x><y>1240</y><w>184</w><h>80</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-4</panel_attributes><additional_attributes>10;10;210;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>752</x><y>1304</y><w>152</w><h>152</h></coordinates><panel_attributes>_Ragdoll : Cat_
+--
+id: 5
+name =  "Ragdoll"
+type = "Cat"
+size = "Medium"
+coat = "Long"
+energy = "Low"
+weight = "4-9kg"
+colour = "Seal, blue, chocolate, lilac, red and cream, plus various patterns and shadings, including bi-color, van, colorpoint and mitted"
+temperament = "Ragdolls are known for their docile and laid-back temperament."
+lifespan = "The average lifespan of a Ragdoll cat ranges from 12 to 15 years."
+
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>192</x><y>896</y><w>96</w><h>24</h></coordinates><panel_attributes>Exception
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>232</x><y>912</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+group=group-4</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>64</x><y>896</y><w>96</w><h>24</h></coordinates><panel_attributes>InvalidSizeError
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>64</x><y>840</y><w>96</w><h>24</h></coordinates><panel_attributes>InvalidCoatError
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>192</x><y>840</y><w>96</w><h>24</h></coordinates><panel_attributes>Exception
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>840</y><w>96</w><h>24</h></coordinates><panel_attributes>Exception
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>896</y><w>96</w><h>24</h></coordinates><panel_attributes>Exception
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>152</x><y>904</y><w>56</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-4</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>152</x><y>840</y><w>56</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-4</panel_attributes><additional_attributes>50;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>232</x><y>856</y><w>24</w><h>56</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-4</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>840</y><w>56</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-4</panel_attributes><additional_attributes>10;70;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>904</y><w>56</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-
+group=group-4</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>336</x><y>88</y><w>240</w><h>408</h></coordinates><panel_attributes>OOA- Understanding - Assumptions - Discussion
+
+PetBreed:
+==========================================
+- will be used as an abstract parent/super class 
+  to the DogBreed and CatBreed child/subclasses. 
+- used as a template to store common information 
+  about a specific dog or cat breed
+- demonstrates Abstraction and Inheritance
+- use Encapsulation to control data access
+
+Class Attributes
+============
+- sizes [small, medium, large]
+- coats [hairless, short, medium, long]    
+
+Attributes:
+===============
+- id                         
+- type 
+- name
+- size 
+- weight
+- coat   
+- energy        
+- temperament
+- lifespan
+
+Behaviors:
+=========
+- displayProfile()  
+      - can be overidden by child classes
+      - demonstrates polymorphism
+
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>584</x><y>88</y><w>240</w><h>240</h></coordinates><panel_attributes>OOA- Understanding - Assumptions - Discussion
+
+DogBreed
+============================
+- inhertis from PetBreed
+- has extra size and coat class attribute variants 
+
+Class Attributes
+============
+- sizes  [mini, giant]
+- coats [double, wiry, smooth, rough]
+
+Extra Attributes:
+=========
+- activities
+
+Behaviors:
+=========
+- displayProfile()  
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>832</x><y>280</y><w>240</w><h>200</h></coordinates><panel_attributes>OOA- Understanding - Assumptions - Discussion
+
+CatBreed
+============================
+- inhertis from PetBreed
+
+Attributes:
+=========
+
+Extra Attributes:
+=========
+- colour
+
+Behaviors:
+=========
+- displayProfile()  
+bg=green
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>1112</y><w>152</w><h>152</h></coordinates><panel_attributes>_AlaskanMalamute : Dog_
+--
+id: 1
+name =  "Alaskan Malamute"
+type = "Dog"
+size = "Giant"
+coat = "Medium"
+energy = "High"
+weight = "38-56kg"
+activities = "Agility, Dog Sledding, Obedience, Rally Obedience, Therapy"
+temperament = "Alaskan Malamutes are known for their friendly and affectionate temperament."
+lifespan = "The average lifespan of an Alaskan Malamute is around 10 to 14 years."
+
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>304</x><y>1176</y><w>128</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-4</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>824</x><y>1112</y><w>152</w><h>152</h></coordinates><panel_attributes>_Siamese: Cat_
+--
+id: 6
+name =  "Siamese"
+type = "Cat"
+size = "Medium"
+coat = "Short"
+energy = "High"
+weight = "3-7kg"
+colour = "Seal point, chocolate point, blue point, lilac point"
+temperament = "Siamese cats are known for their sociable and playful temperament."
+lifespan = "The average lifespan of a Siamese cat ranges from 12 to 20 years."
+
+group=group-4</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>704</x><y>1184</y><w>136</w><h>32</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;
+group=group-4</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element></diagram>
