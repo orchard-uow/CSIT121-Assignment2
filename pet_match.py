@@ -7,23 +7,49 @@ class PetMatch:
     def __init__(self):
         self.pet_store = []
 
-    # todo: dev tests to implete CRUD
-    def add_pet(self, pet):
+    def add_pet_breed(self, pet):
         '''add pet to pet store'''
         self.pet_store.append(pet)
-       
-    # needs fixing to store keys that matched as well 
-    def search_pet(self, searchTerm):
+
+    def search_pet_breed(self, **kwargs):
+        '''search for pets that match an array of atrribute values'''
         pets = []
+
         for pet in self.pet_store:
-            for value in vars(pet).values():
-                if searchTerm.lower() == str(value).lower():
+            for key, value in kwargs.items():
+                # use getAttr() of key in object
+                if getattr(pet, key).lower() == value.lower():
                     pets.append(pet)
-                    
-        self.display_search_results(searchTerm, pets)
-          
-    def display_search_results(self, searchTerm, results):   
-        print(f'Search term:{searchTerm}')
-             
-        for pet in results:
+        # display results
+        self.display_search_results(pets)
+        # return pets          
+        return pets
+
+    def display_search_results(self, pets):   
+        # todo: add search title with      
+        for pet in pets:
             print(pet.display_breed_info())
+
+    def show_all_pet_breeds(self):
+        for pet in self.pet_store:
+            print(pet)
+
+    def show_pet_breed(self, name):
+        for pet in self.pet_store:
+            if pet.name.lower() == name.lower():
+                print(pet)
+                return pet
+
+    def edit_pet_breed(self, petbreed):
+        for pet in self.pet_store:
+            if pet.id == petbreed.id:
+                pet.name = petbreed.name
+                pet.size = petbreed.size
+                pet.weight = petbreed.weight
+                # add other attributes later
+                return
+
+    def delete_pet_breed(self, name):
+        for pet in self.pet_store:
+            if pet.name.lower() == name.lower():
+                self.pet_store.remove(pet)

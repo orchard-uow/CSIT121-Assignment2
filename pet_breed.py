@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 # import custom exceptions
-from exceptions import InvalidSizeError
+# from exceptions import InvalidSizeError
 
 class PetBreed(ABC):
     # class variables
@@ -12,8 +12,8 @@ class PetBreed(ABC):
 
     # constructor
     def __init__(self, type, name, size, weight, coat="", energy="", temperament="", lifespan=""):
-        self.id = self.next_pet_id
-        self.next_pet_id += 1
+        self.id = PetBreed.next_pet_id
+        PetBreed.next_pet_id += 1
         self.type = type
         self.name = name
         self.size = size
@@ -24,8 +24,6 @@ class PetBreed(ABC):
         self.lifespan = lifespan
 
         # these validation tests may be better handled in menu with exceptions
-        # if self.size.lower() not in self.sizes:
-        #     raise InvalidSizeError("Not an accepted size")      
         
     @abstractmethod
     def display_breed_info(self):

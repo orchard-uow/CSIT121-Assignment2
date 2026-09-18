@@ -12,7 +12,7 @@ from exceptions import InvalidSizeError
 class TestDog(unittest.TestCase):
     
     def setUp(self):
-        print("\nSetting up Dog test ...")
+        print("\nDog test ...")
         # DogBreed with all attributes added
         self.dog1 = DogBreed("Dog", "Alaskan Malimut", "Giant", "38-56kg", "Medium", "High", "Alaskan Malamutes are known for their friendly and affectionate temperament",  "The average lifespan of an Alaskan Malamute is around 10 to 14 years.", "Agility, Dog Sledding, Obedience, Rally Obedience, Therapy")
 
@@ -42,7 +42,7 @@ class TestDog(unittest.TestCase):
 class TestCat(unittest.TestCase):
     
     def setUp(self):
-        print("\nSetting up Cat test ...")
+        print("\nCat test ...")
         # CatBreed with all attributes added
         self.cat1 = CatBreed("Cat", "Norwegian Forest Cat", "Large", "6-10kg", "Long", "Medium", "Norwegian Forest Cats are known for their gentle and friendly temperament",  "The average lifespan of a Norwegian Forest Cat ranges from 12 to 16 years.", "White, black, blue, red, cream and silver, plus various patterns and shadings")
 
