@@ -98,7 +98,7 @@ class Menu:
         else:
             attributes = dog_attributes
 
-        # Get values
+        # Get values to set attributes
         for prop in attributes:
 
             while True:
@@ -107,11 +107,11 @@ class Menu:
                 elif prop == 'coat':
                     value = input(f'Enter {prop}({breed.coats}): ')
                 else:
+                    # default non validated attribute values
+                    # can be left empty
                     value = input(f'Enter {prop}: ')
-                # do coat as above
 
                 try:
-
                     if prop == 'size':
                         if value.lower() not in breed.sizes:
                             raise ValueError(
