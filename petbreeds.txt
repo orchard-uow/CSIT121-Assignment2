@@ -1,2 +1,2 @@
-Dog, Border Collie, Medium, 14-20kg
-Cat, Ragdoll, Medium, 4-9kg
+Dog, Border Collie, Medium, 14-20kg, , , , ,
+Cat, Ragdoll, Medium, 4-9kg, , , , ,
