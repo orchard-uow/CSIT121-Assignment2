@@ -3,15 +3,21 @@ from pet_breed import PetBreed
 from cat_breed import CatBreed
 from dog_breed import DogBreed
 from pet_breed_input import PetBreedInput
+from get_pets_from_file import AddPetBreeds
 
 class Menu:
     
     '''menu to display and react to user input'''
     
-    def __init__(self):
-        self.petmatch = PetMatch()
+    def __init__(self, petmatch):
+        self.petmatch = petmatch
         self.breed_input = PetBreedInput()
-        
+        # pass PM object APB
+        self.add_pet_breeds = AddPetBreeds(self.petmatch)
+        # call APB to add pet objects to same pet store
+        self.add_pet_breeds.add_pet_breeds_from_external_file()
+
+
     def petmatch_menu(self):
         '''display menu for users to choose'''
         print()
@@ -63,13 +69,19 @@ class Menu:
 
     def add_pet_breed(self):
         pet = self.breed_input.get_pet_breed_values()
-        print(pet)
-        print(pet.name)
-        print(type(pet))
+        # print(type(pet))
+
         # append pet to self.petmatch.pet_store
+        self.petmatch.pet_store.append(pet)
+        print(len(self.petmatch.pet_store))
+        
 
         
 
 if __name__ == '__main__':
-    menu = Menu()
+    # create a PetMatch object
+    petmatch = PetMatch()
+    # pass PM object into menu
+    menu = Menu(petmatch)
+    # run interface
     menu.petmatch_menu_interface()           

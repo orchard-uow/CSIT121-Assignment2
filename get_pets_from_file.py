@@ -1,6 +1,6 @@
 from cat_breed import CatBreed
 from dog_breed import DogBreed
-from pet_match import PetMatch
+# from pet_match import PetMatch
 
 cat_attributes = [
     'type', 'name', 'size', 'weight', 'coat',
@@ -14,8 +14,8 @@ dog_attributes = [
 
 class AddPetBreeds:
 
-    def __init__(self):
-        self.pet_match = PetMatch()
+    def __init__(self, petmatch):
+        self.pet_match = petmatch
 
     def add_pet_breeds_from_external_file(self):
         '''open text file to read pet data. 
@@ -50,8 +50,9 @@ class AddPetBreeds:
 
                 # researched how to unpack a dict k:v pairs as object parameters
                 pet = breed(**breed_values)
-                print(type(pet))
 
-if __name__ == '__main__':
-    apb = AddPetBreeds()
-    apb.add_pet_breeds_from_external_file()
+                # print(type(pet))
+
+                # append pet to petmatch pet store
+                self.pet_match.pet_store.append(pet)
+
