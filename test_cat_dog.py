@@ -27,17 +27,6 @@ class TestDog(unittest.TestCase):
         self.assertEqual(self.dog1.coat, "Medium")
         self.assertEqual(self.dog2.coat, "")
 
-    # these validation tests may be better handled in menu with exceptions
-    # def test_invalid_size(self):
-    #     with self.assertRaises(InvalidSizeError):
-    #         # DogBreed with invalid size raises an error
-    #         self.dog3 = DogBreed("Dog", "Border Collie", "gigantic", "14-20kg" ) 
-
-    # def test_invalid_coat(self):
-    #     with self.assertRaises(InvalidSizeError):
-    #         # DogBreed with invalid size raises an error
-    #         self.dog3 = DogBreed("Dog", "Border Collie", "gigantic", "14-20kg" ) 
-
 # cat tests
 class TestCat(unittest.TestCase):
     

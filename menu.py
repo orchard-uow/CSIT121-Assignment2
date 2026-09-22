@@ -2,6 +2,7 @@ from pet_match import PetMatch
 from pet_breed import PetBreed
 from cat_breed import CatBreed
 from dog_breed import DogBreed
+from pet_breed_input import PetBreedInput
 
 class Menu:
     
@@ -9,6 +10,7 @@ class Menu:
     
     def __init__(self):
         self.petmatch = PetMatch()
+        self.breed_input = PetBreedInput()
         
     def petmatch_menu(self):
         '''display menu for users to choose'''
@@ -60,90 +62,14 @@ class Menu:
                         print("7. Quit")
 
     def add_pet_breed(self):
+        pet = self.breed_input.get_pet_breed_values()
+        print(pet)
+        print(pet.name)
+        print(type(pet))
+        # append pet to self.petmatch.pet_store
 
-        cat_attributes = [
-            'name', 'size', 'weight', 'coat',
-            'energy', 'temperament', 'lifespan', 'colours'
-        ]
-
-        dog_attributes = [
-            'name', 'size', 'weight', 'coat',
-            'energy', 'temperament', 'lifespan', 'activities'
-        ]
-
-        breed_values = {}
-
-        # Select pet type
-        while True:
-            pet_type = input('Enter pet type (Cat, Dog): ')
-
-            try:
-                if pet_type.lower() not in ['cat', 'dog']:
-                    raise ValueError('Please enter Cat or Dog.')
-
-                if pet_type.lower() == 'cat':
-                    breed = CatBreed
-                else:
-                    breed = DogBreed
-
-                breed_values['type'] = pet_type.capitalize()
-                break
-
-            except ValueError as e:
-                print(e)
-
-        # Select appropriate attributes
-        if pet_type.lower() == 'cat':
-            attributes = cat_attributes
-        else:
-            attributes = dog_attributes
-
-        # Get values to set attributes
-        for prop in attributes:
-
-            while True:
-                if prop == 'size':
-                    value = input(f'Enter {prop}({breed.sizes}): ')
-                elif prop == 'coat':
-                    value = input(f'Enter {prop}({breed.coats}): ')
-                else:
-                    # default non validated attribute values
-                    # can be left empty
-                    value = input(f'Enter {prop}: ')
-
-                try:
-                    if prop == 'size':
-                        if value.lower() not in breed.sizes:
-                            raise ValueError(
-                                f'Size must be one of {breed.sizes}'
-                            )
-
-                    if prop == 'coat':
-                        if value.lower() not in breed.coats:
-                            raise ValueError(
-                                f'Coat must be one of {breed.coats}'
-                            )
-
-                    if prop == 'weight':
-                        if value == '':
-                            raise ValueError(
-                                'A pet must weigh something.'
-                            )
-
-                    if prop == 'weight':
-                        breed_values[prop] = value + 'kg'
-                    elif prop == 'lifespan':
-                        breed_values[prop] = value + 'yrs'
-                    else:
-                        breed_values[prop] = value
-                    break
-
-                except ValueError as e:
-                    print(e)
-
-        print(breed_values)
-                    
         
+
 if __name__ == '__main__':
     menu = Menu()
     menu.petmatch_menu_interface()           
