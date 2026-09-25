@@ -13,8 +13,9 @@ dog_attributes = [
 ]
 
 class AddPetBreeds:
-
+    # when APB object created pass PM object to it
     def __init__(self, petmatch):
+        # store PM object in APB object
         self.pet_match = petmatch
 
     def add_pet_breeds_from_external_file(self):

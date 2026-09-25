@@ -12,7 +12,8 @@ class Menu:
     def __init__(self, petmatch):
         self.petmatch = petmatch
         self.breed_input = PetBreedInput()
-        # pass PM object APB
+        # pass self.petmatch object to 
+        # allows to share same PetMatch object
         self.add_pet_breeds = AddPetBreeds(self.petmatch)
         # call APB to add pet objects to same pet store
         self.add_pet_breeds.add_pet_breeds_from_external_file()
@@ -79,9 +80,9 @@ class Menu:
         
 
 if __name__ == '__main__':
-    # create a PetMatch object
+    # create a PetMatch object - contains pet_store[]
     petmatch = PetMatch()
-    # pass PM object into menu
+    # pass/provide PetMatch object into menu
     menu = Menu(petmatch)
     # run interface
     menu.petmatch_menu_interface()           
