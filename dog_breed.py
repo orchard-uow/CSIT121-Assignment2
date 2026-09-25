@@ -13,7 +13,7 @@ class DogBreed(PetBreed):
         self.activities = activities
 
     def __str__(self):
-        return (f"\nid {self.id} type: {self.type}, name: {self.name}, size: {self.size}, weight: {self.weight}, coat: {self.coat}, energy: {self.energy}, temperament: {self.temperament}, lifespan: {self.lifespan}, activities: {self.activities}"
+        return (f"\nid: {self.id} type: {self.type}, name: {self.name}, size: {self.size}, weight: {self.weight}, coat: {self.coat}, energy: {self.energy}, temperament: {self.temperament}, lifespan: {self.lifespan}, activities: {self.activities}"
 )
     def display_breed_info(self):
         return self.__str__()

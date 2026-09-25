@@ -1,0 +1,91 @@
+[
+    {
+        "type": "Dog",
+        "name": "Alaskan Malamute",
+        "size": "Giant",
+        "weight": "38-56kg",
+        "coat": "Medium",
+        "energy": "High",
+        "temperament": "Alaskan Malamutes are known for their friendly and affectionate temperament.",
+        "lifespan": "10-14 years",
+        "activities": "Agility, Dog Sledding, Obedience, Rally, Therapy"
+    },
+    {
+        "type": "Dog",
+        "name": "Australian Terrier",
+        "size": "Small",
+        "weight": "5-7kg",
+        "coat": "Long",
+        "energy": "Medium",
+        "temperament": "Australian Terriers are spirited, affectionate, and intelligent.",
+        "lifespan": "12-15 years",
+        "activities": "Conformation, Agility, Obedience"
+    },
+    {
+        "type": "Dog",
+        "name": "Border Collie",
+        "size": "Medium",
+        "weight": "14-20kg",
+        "coat": "Medium",
+        "energy": "High",
+        "temperament": "Border Collies are known for their friendly and affectionate nature.",
+        "lifespan": "12-15 years",
+        "activities": "Agility, Conformation, Herding, Obedience, Tracking"
+    },
+    {
+        "type": "Dog",
+        "name": "German Shepherd",
+        "size": "Large",
+        "weight": "40kg",
+        "coat": "",
+        "energy": "",
+        "temperament": "",
+        "lifespan": "",
+        "activities": ""
+    },
+    { 
+        "type": "Cat",
+        "name": "Norwegian Forest Cat",
+        "size": "Large",
+        "weight": "6-10kg",
+        "coat": "Long",
+        "energy": "Medium",
+        "temperament": "Norwegian Forest Cats are known for their gentle and friendly temperament.",
+        "lifespan": "12-16 years",
+        "colours":"White, black, blue, red, cream and silver, plus various patterns and shadings."
+    },
+    {
+        "type": "Cat",
+        "name": "Ragdoll",
+        "size": "Medium",
+        "weight": "4-9kg",
+        "coat": "Long",
+        "energy": "Low",
+        "temperament": "Ragdolls are known for their docile and laid-back temperament.",
+        "lifespan": "12-15 years",
+        "colours": "Seal, blue, chocolate, lilac, red and cream, plus various patterns."
+    },
+    {
+        "type": "Cat",
+        "name": "Siamese",
+        "size": "Medium",
+        "weight": "3-7kg",
+        "coat": "Short",
+        "energy": "High",
+        "temperament": "Siamese cats are known for their sociable and playful temperament.",
+        "lifespan": "12-20 years",
+        "colours": "Seal point, chocolate point, blue point, lilac point"
+    },
+    {
+        "type": "Cat",
+        "name": "Persian",
+        "size": "Large",
+        "weight": "4-8kg",
+        "coat": "",
+        "energy": "",
+        "temperament": "",
+        "lifespan": "",
+        "colours": ""
+    }
+]
+
