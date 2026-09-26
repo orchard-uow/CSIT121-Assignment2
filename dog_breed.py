@@ -7,7 +7,7 @@ class DogBreed(PetBreed):
     coats = PetBreed.coats + ['double', 'wiry', 'smooth', 'rough']
 
     # constructor
-    def __init__(self, type, name, size, weight, coat="", energy="", temperament="", lifespan="", activities=""):
+    def __init__(self, type, name, size, weight="", coat="", energy="", temperament="", lifespan="", activities=""):
         super().__init__(type, name, size, weight, coat, energy, temperament, lifespan)
         
         self.activities = activities

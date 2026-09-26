@@ -4,7 +4,7 @@ from pet_breed import PetBreed
 class CatBreed(PetBreed):
 
     # constructor
-    def __init__(self, type, name, size, weight, coat="", energy="", temperament="", lifespan="", colours=""):
+    def __init__(self, type, name, size, weight="", coat="", energy="", temperament="", lifespan="", colours=""):
         super().__init__(type, name, size, weight, coat, energy, temperament, lifespan)
         self.colours = colours
 

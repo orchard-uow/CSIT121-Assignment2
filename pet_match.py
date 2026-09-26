@@ -15,18 +15,25 @@ class PetMatch:
         '''search for pets that match an array of atrribute values'''
         pets = []
 
-        for pet in self.pet_store:
-            for key, value in kwargs.items():
-                # use getAttr() of key in object
-                if getattr(pet, key).lower() == value.lower():
-                    pets.append(pet)
-        # display results
-        self.display_search_results(pets)
-        # return pets          
-        return pets
+        # check if kwargs is empty
+        if kwargs == {}:
+            print("No pet breeds match this search criteria")
+            return
 
-    def display_search_results(self, pets):   
-        # todo: add search title with      
+        for pet in self.pet_store:
+            match =True
+            for key, value in kwargs.items():
+                if getattr(pet, key).lower()  != value.lower():
+                    match = False
+                    break
+            if match:
+                pets.append(pet)
+
+        self.display_search_results(pets)
+
+        
+
+    def display_search_results(self, pets):       
         for pet in pets:
             print(pet.display_breed_info())
 

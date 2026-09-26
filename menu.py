@@ -4,6 +4,7 @@ from cat_breed import CatBreed
 from dog_breed import DogBreed
 from pet_breed_input import PetBreedInput
 from get_pets_from_file import AddPetBreeds
+from search_breed_criteria import SearchPetBreedCriteria
 
 class Menu:
     
@@ -11,12 +12,15 @@ class Menu:
     
     def __init__(self, petmatch):
         self.petmatch = petmatch
-        self.breed_input = PetBreedInput()
         # pass self.petmatch object to 
         # allows to share same PetMatch object
         self.add_pet_breeds = AddPetBreeds(self.petmatch)
         # call APB to add pet objects to same pet store
         self.add_pet_breeds.add_pet_breeds_from_external_file()
+
+        self.breed_input = PetBreedInput()
+        self.breed_search_criteria = SearchPetBreedCriteria()
+       
 
 
     def petmatch_menu(self):
@@ -58,6 +62,7 @@ class Menu:
                         self.add_pet_breed()
                     case 2:
                         print("2. Search Pet Breeds")
+                        self.search_pet_breeds()
                     case 3:
                         print("3. Show all Pet Breeds")
                         self.show_all_pet_breeds()
@@ -77,6 +82,11 @@ class Menu:
         # append pet to self.petmatch.pet_store
         self.petmatch.pet_store.append(pet)
         print(len(self.petmatch.pet_store))
+
+    def search_pet_breeds(self):
+        search_criteria = self.breed_search_criteria.search_pet_breeds()
+
+        self.petmatch.search_pet_breed(**search_criteria)
         
     def show_all_pet_breeds(self):
         self.petmatch.show_all_pet_breeds()
