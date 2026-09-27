@@ -24,6 +24,9 @@ class Menu:
        
 
     def petmatch_menu(self):
+        # create readwrite txt file of existing pets
+        self.create_pet_breed_file()
+
         '''display menu for users to choose'''
         print()
         print("PetMatch Menu")
@@ -35,7 +38,12 @@ class Menu:
         print("6. Delete Pet Breed")
         print("7. Quit")
         print()
-        
+
+    def create_pet_breed_file(self):
+        with open('PetBreed.txt', 'w') as file:
+            for pet in self.petmatch.pet_store:
+                file.write(str(pet))
+
     def petmatch_menu_interface(self):
         '''user interface for menu display.
         user to enter an option number'''
@@ -74,9 +82,12 @@ class Menu:
                         self.edit_pet_breed()
                     case 6:
                         print("6. Delete Pet Breed")
+                        self.delete_pet_breed()
                     case 7:
-                        print("7. Quit")
-
+                        print("Thanks for visiting PetMatch")
+                        # rewrite PetBreed file
+                        self.create_pet_breed_file()
+                        break
 
     def add_pet_breed(self):
         # refactored pet input sequence into PetBreedInput class
@@ -85,6 +96,9 @@ class Menu:
         # append pet to self.petmatch.pet_store
         self.petmatch.pet_store.append(pet)
         print(f"\n{pet.name} {pet.type} added to pet store")
+
+        # rewrite PetBreed file
+        self.create_pet_breed_file()
 
 
     def search_pet_breeds(self):
@@ -161,7 +175,20 @@ class Menu:
             new_colours,
             new_activities
         )
-        
+
+        # rewrite PetBreed file
+        self.create_pet_breed_file()
+
+
+    def delete_pet_breed(self):
+        pet_number = len(self.petmatch.pet_store) -1
+        name = input("Enter name of pet: ")
+        self.petmatch.delete_pet_breed(name)
+        if len(self.petmatch.pet_store) == pet_number:
+            print(f"Pet breed {name} deleted")
+
+        # rewrite PetBreed file
+        self.create_pet_breed_file()
 
 if __name__ == '__main__':
     # create a PetMatch object - contains pet_store[]

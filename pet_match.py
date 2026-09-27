@@ -93,10 +93,13 @@ class PetMatch:
                     pet.colours = colours
                 else:
                     pet.activities = activities
-                    
+
                 return
 
     def delete_pet_breed(self, name):
+        pet_number = len(self.pet_store)
         for pet in self.pet_store:
             if pet.name.lower() == name.lower():
                 self.pet_store.remove(pet)
+        
+            
