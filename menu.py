@@ -6,6 +6,7 @@ from pet_breed_input import PetBreedInput
 from get_pets_from_file import AddPetBreeds
 from search_breed_criteria import SearchPetBreedCriteria
 
+
 class Menu:
     
     '''menu to display and react to user input'''
@@ -67,9 +68,10 @@ class Menu:
                         self.show_all_pet_breeds()
                     case 4:
                         print("4. Show a Pet Breed")
-                        self.show_pet()
+                        self.get_pet_breed()
                     case 5:
                         print("5. Edit Pet Breed")
+                        self.edit_pet_breed()
                     case 6:
                         print("6. Delete Pet Breed")
                     case 7:
@@ -95,9 +97,70 @@ class Menu:
         self.petmatch.show_all_pet_breeds()
 
 
-    def show_pet(self):
+    def get_pet_breed(self):
         name = input("Enter name of pet: ")
         self.petmatch.show_pet_breed(name)
+
+    def edit_pet_breed(self):
+        # no validation yet
+        name = input("Enter name of pet: ")
+        pet = self.petmatch.show_pet_breed(name)
+
+        if pet is None:
+            print("Pet breed not found")
+            return
+
+        new_name = input(f"Enter new name ({pet.name}): ")
+        if not new_name:
+            new_name = pet.name
+
+        new_size = input(f"Enter new size ({pet.size}): ")
+        if not new_size:
+            new_size = pet.size
+
+        new_weight = input(f"Enter new weight ({pet.weight}): ")
+        if not new_weight:
+            new_weight = pet.weight
+
+        new_coat = input(f"Enter new coat ({pet.coat}): ")
+        if not new_coat:
+            new_coat = pet.coat
+
+        new_energy = input(f"Enter new energy ({pet.energy}): ")
+        if not new_energy:
+            new_energy = pet.energy
+
+        new_temperament = input(f"Enter new temperament ({pet.temperament}): ")
+        if not new_temperament:
+            new_temperament = pet.temperament
+
+        new_lifespan = input(f"Enter new lifespan ({pet.lifespan}): ")
+        if not new_lifespan:
+            new_lifespan = pet.lifespan
+
+        if pet.type.lower() == "cat":
+            new_colours = input("Enter new colours: ")
+            if not new_colours:
+                new_colours = pet.colours
+            new_activities = ""
+        else:
+            new_colours = ""
+            new_activities = input(f"Enter new activities ({pet}): ")
+            if not new_activities:
+                new_activities = pet.activities
+
+        self.petmatch.edit_pet_breed(
+            pet,
+            new_name,
+            new_size,
+            new_weight,
+            new_coat,
+            new_energy,
+            new_temperament,
+            new_lifespan,
+            new_colours,
+            new_activities
+        )
         
 
 if __name__ == '__main__':

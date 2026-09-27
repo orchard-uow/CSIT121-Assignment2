@@ -76,14 +76,24 @@ class PetMatch:
             if pet.name.lower() == name.lower():
                 print(pet)
                 return pet
+        return None
 
-    def edit_pet_breed(self, petbreed):
+    def edit_pet_breed(self, petbreed, name, size, weight, coat, energy, temperament, lifespan, colours, activities):
         for pet in self.pet_store:
             if pet.id == petbreed.id:
-                pet.name = petbreed.name
-                pet.size = petbreed.size
-                pet.weight = petbreed.weight
-                # add other attributes later
+                pet.name = name
+                pet.size = size
+                pet.weight = weight
+                pet.coat = coat
+                pet.energy = energy
+                pet.temperament = temperament
+                pet.lifespan = lifespan
+
+                if pet.type.lower() == 'cat':
+                    pet.colours = colours
+                else:
+                    pet.activities = activities
+                    
                 return
 
     def delete_pet_breed(self, name):
