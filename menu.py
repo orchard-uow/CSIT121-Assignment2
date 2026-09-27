@@ -81,11 +81,11 @@ class Menu:
 
         # append pet to self.petmatch.pet_store
         self.petmatch.pet_store.append(pet)
-        print(len(self.petmatch.pet_store))
+        print(f"\n{pet.name} {pet.type} added to pet store")
 
     def search_pet_breeds(self):
         search_criteria = self.breed_search_criteria.search_pet_breeds()
-
+        # print(search_criteria)
         self.petmatch.search_pet_breed(**search_criteria)
         
     def show_all_pet_breeds(self):

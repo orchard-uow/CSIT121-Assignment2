@@ -1,0 +1,4 @@
+PetMatch Summary: {'type': 'Cat', 'size': 'Large'}
+
+id: 5 type: Cat, name: Norwegian Forest Cat, size: Large, weight: 6-10kg, coat: Long, energy: Medium, temperament: Norwegian Forest Cats are known for their gentle and friendly temperament., lifespan: 12-16 years, colours: White, black, blue, red, cream and silver, plus various patterns and shadings.
+id: 8 type: Cat, name: Persian, size: Large, weight: 4-8kg, coat: , energy: , temperament: , lifespan: , colours: 

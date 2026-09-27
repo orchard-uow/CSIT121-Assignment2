@@ -2,6 +2,8 @@ from pet_breed import PetBreed
 from cat_breed import CatBreed
 from dog_breed import DogBreed
 
+from helper import snake_case
+
 class PetMatch:
     # constructor
     def __init__(self):
@@ -16,8 +18,8 @@ class PetMatch:
         pets = []
 
         # check if kwargs is empty
-        if kwargs == {}:
-            print("No pet breeds match this search criteria")
+        if not kwargs:
+            print("No pet breeds match this search criteria in kwargs{ }")
             return
 
         for pet in self.pet_store:
@@ -28,15 +30,36 @@ class PetMatch:
                     break
             if match:
                 pets.append(pet)
+        if not pets:
+            print("No pet breeds match this search criteria in []")
+            return
 
         self.display_search_results(pets)
+        self.export_search_results(pets, kwargs)
 
-        
-
-    def display_search_results(self, pets):       
+    def display_search_results(self, pets):
         for pet in pets:
             print(pet.display_breed_info())
+        
+    def export_search_results(self, pets, search_criteria):
+        while True:
+            report_option = input("Create a report file of search results (Y/N): ")
+            try:
+                if report_option.lower() not in ['y', 'n']:
+                    raise ValueError("Enter Y or N")
+            except ValueError as e:
+                print(e)
+            else:
+                report_name = snake_case(input("Enter report file name: "))
+                file_name = report_name + '.txt'
+                with open(file_name, 'w') as file:
+                    file.write(f'PetMatch Summary: {search_criteria}')
+                    file.write('\n')
+                    for pet in pets:
+                        file.write(str(pet))
+                
 
+        
     def show_all_pet_breeds(self):
         for pet in self.pet_store:
             print(pet)
