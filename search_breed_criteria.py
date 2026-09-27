@@ -20,12 +20,16 @@ class SearchPetBreedCriteria:
         if pet_type:
             search_criteria['type'] = pet_type.lower().capitalize()
 
-        pet_name = input('Enter pet name: ').strip()
-        if pet_name:
-            search_criteria['name'] = pet_name.lower().capitalize()
+        # pet_name = input('Enter pet name: ').strip()
+        # if pet_name:
+        #     search_criteria['name'] = pet_name.lower().capitalize()
         
         pet_size = input(f'Enter pet size ({breed.sizes}): ').strip()  
         if pet_size:
             search_criteria['size'] = pet_size.lower().capitalize()
+
+        pet_coat = input(f'Enter pet coat ({breed.coats}): ').strip()
+        if pet_coat:
+            search_criteria['coat'] = pet_coat.lower().capitalize()
 
         return search_criteria

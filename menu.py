@@ -68,6 +68,7 @@ class Menu:
                         self.show_all_pet_breeds()
                     case 4:
                         print("4. Show a Pet Breed")
+                        self.show_pet()
                     case 5:
                         print("5. Edit Pet Breed")
                     case 6:
@@ -90,6 +91,10 @@ class Menu:
         
     def show_all_pet_breeds(self):
         self.petmatch.show_all_pet_breeds()
+
+    def show_pet(self):
+        name = input("Enter name of pet: ")
+        self.petmatch.show_pet_breed(name)
         
 
 if __name__ == '__main__':

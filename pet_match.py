@@ -5,13 +5,17 @@ from dog_breed import DogBreed
 from helper import snake_case
 
 class PetMatch:
-    # constructor
+# #### constructor
     def __init__(self):
         self.pet_store = []
 
+# #### add pet breed
     def add_pet_breed(self, pet):
         '''add pet to pet store'''
         self.pet_store.append(pet)
+
+
+# #### search pet_store methods
 
     def search_pet_breed(self, **kwargs):
         '''search for pets that match an array of atrribute values'''
@@ -47,6 +51,8 @@ class PetMatch:
             try:
                 if report_option.lower() not in ['y', 'n']:
                     raise ValueError("Enter Y or N")
+                if report_option == 'n':
+                    break
             except ValueError as e:
                 print(e)
             else:
@@ -57,9 +63,10 @@ class PetMatch:
                     file.write('\n')
                     for pet in pets:
                         file.write(str(pet))
+                break
                 
 
-        
+# #### show pet/s method/s    
     def show_all_pet_breeds(self):
         for pet in self.pet_store:
             print(pet)
