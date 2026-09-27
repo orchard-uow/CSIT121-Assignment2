@@ -22,7 +22,6 @@ class Menu:
         self.breed_search_criteria = SearchPetBreedCriteria()
        
 
-
     def petmatch_menu(self):
         '''display menu for users to choose'''
         print()
@@ -76,6 +75,7 @@ class Menu:
                     case 7:
                         print("7. Quit")
 
+
     def add_pet_breed(self):
         # refactored pet input sequence into PetBreedInput class
         pet = self.breed_input.get_pet_breed_values()
@@ -84,13 +84,16 @@ class Menu:
         self.petmatch.pet_store.append(pet)
         print(f"\n{pet.name} {pet.type} added to pet store")
 
+
     def search_pet_breeds(self):
         search_criteria = self.breed_search_criteria.search_pet_breeds()
         # print(search_criteria)
         self.petmatch.search_pet_breed(**search_criteria)
+
         
     def show_all_pet_breeds(self):
         self.petmatch.show_all_pet_breeds()
+
 
     def show_pet(self):
         name = input("Enter name of pet: ")

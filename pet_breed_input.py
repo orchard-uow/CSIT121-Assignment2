@@ -1,6 +1,8 @@
 from cat_breed import CatBreed
 from dog_breed import DogBreed
 
+from exceptions import InvalidBreedError, InvalidSizeError, InvalidCoatError
+
 class PetBreedInput:
 
     def get_pet_breed_values(self):
@@ -22,7 +24,7 @@ class PetBreedInput:
 
             try:
                 if pet_type.lower() not in ['cat', 'dog']:
-                    raise ValueError('Please enter Cat or Dog.')
+                    raise InvalidBreedError('Please enter Cat or Dog.')
 
                 if pet_type.lower() == 'cat':
                     breed = CatBreed
@@ -34,7 +36,7 @@ class PetBreedInput:
                 breed_values['type'] = pet_type.capitalize()
                 break
 
-            except ValueError as e:
+            except InvalidBreedError as e:
                 print(e)
 
         # Get values to set attributes
@@ -53,13 +55,13 @@ class PetBreedInput:
                 try:
                     if prop == 'size':
                         if value.lower() not in breed.sizes:
-                            raise ValueError(
+                            raise InvalidSizeError(
                                 f'Size must be one of {breed.sizes}'
                             )
 
                     if prop == 'coat':
                         if value.lower() not in breed.coats:
-                            raise ValueError(
+                            raise InvalidCoatError(
                                 f'Coat must be one of {breed.coats}'
                             )
 
@@ -77,7 +79,7 @@ class PetBreedInput:
                         breed_values[prop] = value
                     break
 
-                except ValueError as e:
+                except (InvalidSizeError, InvalidCoatError, ValueError) as e:
                     print(e)
                     
         # ** unpack dict & pass each k:v pairs
