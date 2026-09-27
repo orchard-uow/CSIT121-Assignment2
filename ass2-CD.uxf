@@ -7,27 +7,21 @@
 + edit_pet_breed(breed: PetBreed): void
 + delete_pet_breed(breed: PetBreed): void 
 + show_breed(name: String): void
-+ show_all_breeds(): void
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>220</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
++ show_all_breeds(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>220</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 manages
 m1=1
-m2=0..*
-group=group-1</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>300</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-
-group=group-1</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>340</y><w>210</w><h>80</h></coordinates><panel_attributes>
-group=group-1</panel_attributes><additional_attributes>190;60;190;20;10;20;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>400</y><w>170</w><h>120</h></coordinates><panel_attributes>DogBreed
+m2=0..*</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>300</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>340</y><w>210</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>190;60;190;20;10;20;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>400</y><w>170</w><h>120</h></coordinates><panel_attributes>DogBreed
 --
 + sizes: List&lt;String&gt;
 + coats: List&lt;String&gt;
 --
 - activities: String
 --
-+ displayProfile(): String
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>400</y><w>170</w><h>120</h></coordinates><panel_attributes>CatBreed
++ displayProfile(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>400</y><w>170</w><h>120</h></coordinates><panel_attributes>CatBreed
 --
 - colour: String
 --
-+ displayProfile(): String
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_AustralianTerrier: Dog_
++ displayProfile(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_AustralianTerrier: Dog_
 --
 id: 2
 type = "Dog"
@@ -39,8 +33,7 @@ energy = "Medium"
 temperament = "Australian Terriers are spirited, affectionate, and intelligent."
 lifespan = "The Australian Terrier can live between 12 to 15 years."
 activities = "Conformation, Agility, Obedience"
-
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_BorderCollie : Dog_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_BorderCollie : Dog_
 --
 id: 3
 type = "Dog"
@@ -51,12 +44,9 @@ coat = "Medium"
 energy = "High"
 temperament = "Border Collies are known for their friendly and affectionate nature."
 lifespan = "The average lifespan of a Border Collie is around 12 to 15 years."
-activities = "Agility, Conformation, Herding, Obedience, Rally Obedience, Tracking"
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>510</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;
-group=group-1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>510</y><w>220</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;
-group=group-1</panel_attributes><additional_attributes>200;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_NorwegianForestCat : Cat_
+activities = "Agility, Conformation, Herding, Obedience, Rally Obedience, Tracking"</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>510</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>510</y><w>220</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>200;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_NorwegianForestCat : Cat_
 --
 id: 4
 type = "Cat"
@@ -68,12 +58,9 @@ energy = "Medium"
 temperament = "Norwegian Forest Cats are known for their gentle and friendly temperament."
 lifespan = "The average lifespan of a Norwegian Forest Cat ranges from 12 to 16 years."
 colour = "White, black, blue, red, cream and silver, plus various patterns and shadings"
-
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>510</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;
-group=group-1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>510</y><w>230</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;
-group=group-1</panel_attributes><additional_attributes>10;10;210;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_Ragdoll : Cat_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>510</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>510</y><w>230</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;210;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>590</y><w>190</w><h>190</h></coordinates><panel_attributes>_Ragdoll : Cat_
 --
 id: 5
 type = "Cat"
@@ -85,20 +72,9 @@ energy = "Low"
 temperament = "Ragdolls are known for their docile and laid-back temperament."
 lifespan = "The average lifespan of a Ragdoll cat ranges from 12 to 15 years."
 colour = "Seal, blue, chocolate, lilac, red and cream, plus various patterns and shadings, including bi-color, van, colorpoint and mitted"
-
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>80</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>100</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
-group=group-1</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>80</y><w>120</w><h>30</h></coordinates><panel_attributes>InvalidSizeError
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>InvalidCoatError
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>80</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>90</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-
-group=group-1</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>10</y><w>70</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-
-group=group-1</panel_attributes><additional_attributes>50;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>30</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-
-group=group-1</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>10</y><w>70</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-
-group=group-1</panel_attributes><additional_attributes>10;70;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>90</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-
-group=group-1</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>350</y><w>190</w><h>190</h></coordinates><panel_attributes>_AlaskanMalamute : Dog_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>80</y><w>120</w><h>30</h></coordinates><panel_attributes>Exception</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>100</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>InvalidBreedError
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>InvalidSizeErrror
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>10</y><w>120</w><h>30</h></coordinates><panel_attributes>InvalidCoatError</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>10</y><w>70</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>30</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>10</y><w>70</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;70;50;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>350</y><w>190</w><h>190</h></coordinates><panel_attributes>_AlaskanMalamute : Dog_
 --
 id: 1
 type = "Dog"
@@ -110,10 +86,8 @@ energy = "High"
 temperament = "Alaskan Malamutes are known for their friendly and affectionate temperament."
 lifespan = "The average lifespan of an Alaskan Malamute is around 10 to 14 years."
 activities = "Agility, Dog Sledding, Obedience, Rally Obedience, Therapy"
-
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>430</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;
-group=group-1</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>350</y><w>190</w><h>190</h></coordinates><panel_attributes>_Siamese: Cat_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>430</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>350</y><w>190</w><h>190</h></coordinates><panel_attributes>_Siamese: Cat_
 --
 id: 6
 type = "Cat"
@@ -125,10 +99,8 @@ energy = "High"
 temperament = "Siamese cats are known for their sociable and playful temperament."
 lifespan = "The average lifespan of a Siamese cat ranges from 12 to 20 years."
 colour = "Seal point, chocolate point, blue point, lilac point"
-
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>440</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;
-group=group-1</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>80</y><w>260</w><h>230</h></coordinates><panel_attributes>/PetBreed/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>440</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>80</y><w>260</w><h>230</h></coordinates><panel_attributes>/PetBreed/
 --
 + sizes: List&lt;String&gt;
 + coats: List&lt;String&gt;
@@ -137,12 +109,11 @@ group=group-1</panel_attributes><additional_attributes>10;20;150;20</additional_
 - type: String 
 - name: String    
 - size: String       
-- weight: int  
-- coat: String
-- energy: String   
-- temperament: String
-- lifespan: String                
+- weight: int     [0..1]
+- coat: String    [0..1]
+- energy: String   [0..1]
+- temperament: String   [0..1]
+- lifespan: String   [0..1]              
 --
 + displayProfile(): String
-
-group=group-1</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
