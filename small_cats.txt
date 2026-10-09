@@ -1,0 +1,3 @@
+PetMatch Summary: {'type': 'Cat', 'size': 'Small'}
+
+id: 9 type: Cat, name: Rex, size: small, weight: 2-4kg, coat: hairless, energy: high, temperament: gentle, lifespan: 8-12yrs, colours: mottled
